@@ -1,0 +1,7 @@
+---
+ddns_route53_hosted_zone_id: '' # ID retrieved from record in Route 53
+ddns_route53_record_set_name: '' # Example: home.domain.com
+ddns_route53_ttl: 300
+ddns_route53_interval_minutes: 5
+ddns_route53_script_download_url: https://raw.githubusercontent.com/mthssdrbrg/ddns-route53/master/ddns-route53
+ddns_route53_binary_path: /usr/local/bin/ddns-route53

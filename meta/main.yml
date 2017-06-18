@@ -1,0 +1,14 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: bmcclure
+  description: An Ansible role for managing a script to automatically update a dynamic IP address via Route 53
+  company: "Volantis Development"
+  license: Apache
+  min_ansible_version: 2.0
+  platforms:
+    - name: Archlinux
+      versions:
+        - all
+  galaxy_tags: []

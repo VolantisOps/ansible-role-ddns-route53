@@ -1,0 +1,16 @@
+---
+- name: Ensure ddns-route53 command is installed
+  get_url:
+    url: "{{ ddns_route53_script_download_url }}"
+    dest: "{{ ddns_route53_binary_path }}"
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Ensure ddns-route53 cron job is set up
+  cron:
+    name: ddns-route53
+    minute: "/{{ ddns_route53_interval_minutes }}"
+    user: root
+    job: "{{ ddns_route53_binary_path }} --zone-id {{ ddns_route53_hosted_zone_id }} --record-set {{ ddns_route53_record_set_name }} --ttl {{ ddns_route53_ttl }}"
+    cron_file: ansible_ddns-route53
